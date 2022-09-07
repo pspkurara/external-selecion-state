@@ -1,0 +1,21 @@
+{
+    "name": "Pspkurara.ExternalSelectionState.Runtime",
+    "references": [
+        "GUID:9620c83494056b44ebae43374bb19b7e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.pspkurara.ugui-skinner",
+            "expression": "",
+            "define": "ESS_UGUISKINNER_SUPPORT"
+        }
+    ],
+    "noEngineReferences": false
+}

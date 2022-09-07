@@ -1,0 +1,23 @@
+{
+  "category": "Unity",
+  "description": "The system allows external access to Selection.SelectionState, which is a protected Enum of uGUI.\nYou need to create your own UI (CustomButton, CustomToggle, etc.) classes that inherit from components that inherit from Selection classes such as Button and Toggle, and implement this library.",
+  "displayName": "External Selection State",
+  "author": "pspkurara",
+  "keywords": [
+    "GUI",
+    "UI",
+    "uGUI",
+    "Selection",
+    "External",
+    "SelectionState"
+  ],
+  "name": "com.pspkurara.external-selection-state",
+  "repository": "https://github.com/pspkurara/ugui-skinner.git",
+  "license": "MIT",
+  "version": "1.0.0",
+  "type": "library",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0"
+  },
+  "unity": "2017.1"
+}
