@@ -16,6 +16,7 @@ You need to create your own UI (CustomButton, CustomToggle, etc.) classes that i
 3. Make it inherit the "ISelectableWithESS" interface and implementation functions.
 4. Override the "Selection.DoStateTransition" function and call "this.DoStateTransitionFromSelectable" function.
 ```
+using UnityEngine;
 using UnityEngine.UI;
 using Pspkurara.UI;
 using Pspkurara.UI.ESS;
@@ -23,12 +24,12 @@ using Pspkurara.UI.ESS;
 public class CustomButton : Button, ISelectableWithESS
 {
 	// Use UnityEvent to register in the inspector and execute in the editor.
-	[SerializedField]
+	[SerializeField]
 	private OnDoStateTransitionEvent m_OnDoStateTransitionEvent = new OnDoStateTransitionEvent();
 	
 	public ExternalSelectionState currentExternalSelectionState
 	{ 	// Convert protected Selectable.SelectionState to public.
-		get { return (int)base.currentSelectionState; } 
+		get { return (ExternalSelectionState)(int)base.currentSelectionState; } 
 	}
 	
 	public OnDoStateTransitionEvent onDoStateTransition
@@ -40,7 +41,7 @@ public class CustomButton : Button, ISelectableWithESS
 	{
 		base.DoStateTransition(state, instant);
 		// Trigger from UnityEngine.UI.Selectable.
-		this.DoStateTransitionFromSelectable(state, instant);
+		this.DoStateTransitionFromSelectable((int)state, instant);
 	}
 }
 ```
@@ -55,13 +56,11 @@ public class CustomButton : Button, ISelectableWithESS
 6. Add "immediate reflection" call just before adding callback.
 7. Implement the function or effect you want to have in the ”OnDoStateTransition”.
 ```
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Pspkurara.UI;
 
-[AddComponentMenu("UI/Sample Link")]
-[RequireComponent(typeof(Selectable))]
-[ExecuteInEditMode]
 public class SampleLink : UIBehaviour
 {
 	// Own Selectable.
