@@ -5,7 +5,7 @@ You need to create your own UI (CustomButton, CustomToggle, etc.) classes that i
 
 [![](https://img.shields.io/npm/v/com.pspkurara.external-selection-state?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.pspkurara.external-selection-state/)
 [![](https://img.shields.io/github/v/release/pspkurara/external-selection-state)](https://github.com/pspkurara/external-selection-state/releases/)
-[![](https://img.shields.io/github/watchers/pspkurara/external-selection-state?style=social)](https://github.com/pspkurara/external-selection-state/subscription)
+[![](https://img.shields.io/github/watchers/pspkurara/external-selection-state?style=social)](https://github.com/pspkurara/external-selecion-state/subscription)
 
 ## Usage
 
