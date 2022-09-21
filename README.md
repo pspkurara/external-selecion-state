@@ -115,6 +115,9 @@ public class SampleLink : UIBehaviour
 1. Attach an effect adaptation component (SampleLink in the example) to an object with an extended Selectable (CustomButton in the example).
 2. Execute or change parameters and check if they are reflected correctly.
 
+### Full API references
+* https://pspkurara.github.io/external-selection-state/
+
 ## Installation
 
 ### Using OpenUPM
